@@ -1,7 +1,8 @@
 import LinkedList from './linked-list.js';
-// import Node from './node.js';
 
 const list = new LinkedList();
+
+console.log('initial size:', list.size());
 
 list.append('dog');
 list.append('cat');
@@ -10,6 +11,12 @@ list.append('hamster');
 list.append('snake');
 list.append('turtle');
 
-console.log(list.toString());
+console.log('toString:', list.toString());
 
-console.log(list.size());
+console.log('appended size:', list.size());
+console.log('head:', list.head);
+console.log('tail:', list.tail());
+console.log('at (-1):', list.at(-1));
+console.log('at (0):', list.at(0));
+console.log('at (2):', list.at(2));
+console.log('at (4):', list.at(4));

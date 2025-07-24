@@ -34,11 +34,28 @@ export default class LinkedList {
     return listSize;
   }
 
-  head() {}
+  head() {
+    return this.head;
+  }
 
-  tail() {}
+  tail() {
+    if (!this.head) return null;
+    let current = this.head;
 
-  at(index) {}
+    while (current.next) {
+      current = current.next;
+    }
+    return current;
+  }
+
+  at(index) {
+    if (index < 0 || !this.head) return null;
+    let current = this.head;
+    for(let i = 0; i < index; i++){
+      current = current.next;
+    }
+    return current;
+  }
 
   pop() {}
 
