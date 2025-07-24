@@ -10,6 +10,6 @@ list.append('hamster');
 list.append('snake');
 list.append('turtle');
 
-// console.log(list.toString());
+console.log(list.toString());
 
 console.log(list.size());

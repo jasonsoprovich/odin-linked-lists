@@ -23,7 +23,7 @@ export default class LinkedList {
     newNode.next = this.head;
     this.head = newNode;
   }
-  
+
   size() {
     let listSize = 0;
     let current = this.head;
@@ -33,25 +33,32 @@ export default class LinkedList {
     }
     return listSize;
   }
-  
+
   head() {}
-  
+
   tail() {}
-  
+
   at(index) {}
-  
+
   pop() {}
-  
+
   contains(data) {}
-  
+
   find(data) {}
-  
+
   toString() {
-    for (let i = 0; i < this.size; i++) {
+    let output = '';
+    let current = this.head;
+
+    while (current) {
+      output += `( ${current.data} ) -> `;
+      current = current.next;
     }
+    output += 'null';
+    return output;
   }
-  
+
   insertAt(data, index) {}
-  
+
   removeAt(index) {}
 }
