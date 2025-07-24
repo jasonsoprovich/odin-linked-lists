@@ -57,7 +57,22 @@ export default class LinkedList {
     return current;
   }
 
-  pop() {}
+  pop() {
+    if (!this.head) return null;
+    if (!this.head.next) {
+      const popNode = this.head;
+      this.head = null; 
+      return popNode;
+    }
+    let current = this.head;
+    let previous = null;
+    while (current.next) {
+      previous = current;
+      current = current.next;
+    }
+    previous.next = null;
+    return current; 
+  }
 
   contains(data) {}
 
