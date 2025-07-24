@@ -1,4 +1,4 @@
-import LinkedList from './linked-list.js';
+import LinkedList from './linkedList.js';
 
 const list = new LinkedList();
 
@@ -20,6 +20,7 @@ console.log('toString:', list.toString());
 // console.log('at (0):', list.at(0));
 // console.log('at (2):', list.at(2));
 // console.log('at (4):', list.at(4));
-
-list.pop();
-console.log('toString:', list.toString());
+// list.pop();
+// console.log('toString:', list.toString());
+// console.log('contains(parrot):', list.contains('parrot'));
+// console.log('contains(frog):', list.contains('frog'));

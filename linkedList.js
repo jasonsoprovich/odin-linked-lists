@@ -74,7 +74,16 @@ export default class LinkedList {
     return current; 
   }
 
-  contains(data) {}
+  contains(data) {
+    let current = this.head;
+    while (current) {
+      if (current.data === data) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
 
   find(data) {}
 
