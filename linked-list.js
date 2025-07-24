@@ -1,7 +1,8 @@
+import Node from './node.js';
+
 export default class LinkedList {
   constructor() {
     this.head = null;
-    this.size = 0;
   }
 
   append(data) {
@@ -15,19 +16,42 @@ export default class LinkedList {
       }
       current.next = newNode;
     }
-    this.size++;
   }
 
   prepend(data) {
     const newNode = new Node(data);
     newNode.next = this.head;
     this.head = newNode;
-    this.size++;
   }
+  
+  size() {
+    let listSize = 0;
+    let current = this.head;
+    while (current) {
+      listSize++;
+      current = current.next;
+    }
+    return listSize;
+  }
+  
+  head() {}
+  
+  tail() {}
+  
+  at(index) {}
+  
+  pop() {}
+  
+  contains(data) {}
+  
+  find(data) {}
   
   toString() {
     for (let i = 0; i < this.size; i++) {
-      
     }
   }
+  
+  insertAt(data, index) {}
+  
+  removeAt(index) {}
 }
