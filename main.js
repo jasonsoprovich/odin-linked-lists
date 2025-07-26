@@ -25,3 +25,6 @@ console.log('appended size:', list.size());
 // console.log('contains(frog):', list.contains('frog'));
 // console.log('find(hamster)', list.find('hamster'));
 // console.log('find(rabbit)', list.find('rabbit'));
+// list.insertAt('frog',1);
+
+console.log('toString:', list.toString());
