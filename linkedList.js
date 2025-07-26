@@ -101,7 +101,6 @@ export default class LinkedList {
   toString() {
     let output = '';
     let current = this.head;
-
     while (current) {
       output += `( ${current.data} ) -> `;
       current = current.next;
@@ -112,12 +111,10 @@ export default class LinkedList {
 
   insertAt(data, index) {
     if (index < 0) return;
-
     if (index === 0) {
       this.prepend(data);
       return;
     }
-    
     const newNode = new Node(data);
     let current = this.head;
     let previous = null;
@@ -127,12 +124,10 @@ export default class LinkedList {
       current = current.next;
       i++;
     }
-
     if (i < index) {
       this.append(data);
       return;
     }
-
     newNode.next = current;
     if (previous) {
       previous.next = newNode;
@@ -148,19 +143,15 @@ export default class LinkedList {
       this.head = this.head.next;
       return removed;
     }
-    
     let current = this.head;
     let previous = null;
     let i = 0;
-    
     while (current && i < index) {
       previous = current;
       current = current.next;
       i++;
     }
-    
     if (!current) return null;
-    
     previous.next = current.next;
     return current;
   }
